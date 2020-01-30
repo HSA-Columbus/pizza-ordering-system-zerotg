@@ -1,0 +1,48 @@
+body {position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+}
+
+.one{position: absolute;
+width: 1440px;
+height: 113px;
+left: 0;
+top: 0;
+margin:0 auto;
+background: #A60000;
+}
+
+.text1{position: absolute;
+width: 894px;
+height: 113px;
+left: 299px;
+top: 0;
+font-family: Sofia, serif;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 113px;
+display: flex;
+align-items: center;
+text-align: center;
+margin: auto;
+color: #FFFFFF;}
+
+.two{position: absolute;
+width: 1440px;
+height: 113px;
+left: 0;
+top: 113px;
+margin:0 auto;
+background: #000000;}
+
+.three{position: absolute;
+width: 1440px;
+height: 113px;
+left: 0;
+top: 113px;
+margin:0 auto;
+background: #000000;}
