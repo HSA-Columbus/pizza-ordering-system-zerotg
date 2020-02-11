@@ -10,6 +10,7 @@ background: #A60000;
 .text1{position: absolute;
 width: 100%;
 height: 113px;
+    font-family: Sofia, fantasy;
 font-style: normal;
 font-weight: normal;
 font-size: 72px;
@@ -41,7 +42,7 @@ top: 23px;
 }
 .options{position: absolute;
 left: 65px;
-top: 430px;}
+top: 530px;}
 
 .name{
     position: absolute;
@@ -52,27 +53,19 @@ top: 430px;}
 .house{
     position: absolute;
     left: 65px;
-    top: 330px
+    top: 360px
 }
 
 .add{
     position: absolute;
     left: 65px;
-    top: 1000px;
-}
-
-.luigi{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    right: 0;
-    top: 1250px;
+    top: 800px;
 }
 
 .jump{
     position: absolute;
     left: 65px;
-    top: 900px;
+    top: 1050px;
     width: 100px;
     height: 100px
 }
@@ -80,20 +73,20 @@ top: 430px;}
 .price{
     position: absolute;
     left: 65px;
-    top: 1220px;
+    top: 1240px;
 }
 
 .total{
     position: absolute;
     left: 65px;
-    top: 1320px;
+    top: 1380px;
 }
 
 
 .calories{
     position: absolute;
     left: 65px;
-    top: 1270px;
+    top: 1310px;
 }
 
 .form-group{
@@ -102,14 +95,43 @@ top: 430px;}
     top: 1145px;
 }
 
-.luigi_face{position: absolute;
-right: 200px;
-top: 400px;
-height: 130px;
-width: 130px;}
+.luigi{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 350px;
+    top: 700px;
+}
 
-.the_pizza{position: absolute;
-right: 0;
-top: 160px;
-height: 250px;
-width: 567px;}
+
+.cover{
+    position: absolute;
+    left: 280px;
+    top: 610px;
+    height: 120px;
+    width: 120px;
+}
+
+.price_text{
+    position: absolute;
+    left: 65px;
+    top: 1210px;
+}
+
+.quantity_text{
+    position: absolute;
+    left: 65px;
+    top: 1135px;
+}
+
+.calorie_text{
+    position: absolute;
+    left: 65px;
+    top: 1280px;
+}
+
+.total_text{
+    position: absolute;
+    left: 65px;
+    top: 1350px;
+}

@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Pizza</title>
+<meta charset="UTF-8">
+<title>Pizza</title>
         <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/options.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+<link rel="stylesheet" href="../static/options.css">
+
+
 </head>
+
 <body>
 <div class="one"><a class="text1">
-    <img src="../static/image/mario_PNG75.png" alt="mario mushroom" class="mushroom">
-    Luigi and Mario's Pizzeria</a></div>
+<img src="../static/image/mario_PNG75.png" alt="mario mushroom" class="mushroom">
+Luigi and Mario's Pizzeria</a></div>
 
 <!-- NavBar -->
 
 <div class="two">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Mario and Luigi</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Luigi and Mario's</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -53,35 +57,37 @@
 
 <!-- Pizzas -->
 
+<form action="" method="get" id="additions">
 <div class="options">
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-  <img src="../static/image/Sicilian.jpg" alt="sicilian"> Sicilian
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('10.99','../static/image/Sicilian.jpg')" name="pizzatype" id="pizzatype1" value="sicilian" checked>
+  <label class="form-check-label" for="pizzatype1">
+      Sicilian
   </label>
 </div>
-
+<br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-   <img src="../static/image/Marine.jpg" alt="Marine"> Marine
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('11.99','../static/image/Marine.jpg')" name="pizzatype" id="pizzatype2" value="marine">
+  <label class="form-check-label" for="pizzatype2">
+      Marine
   </label>
 </div>
-
+<br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-  <label class="form-check-label" for="exampleRadios3">
-   <img src="../static/image/Napoliten.jpg" alt="Napoliten"> Napoliten
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('12.99','../static/image/Napoliten.jpg')" name="pizzatype" id="pizzatype3" value="napoliten">
+  <label class="form-check-label" for="pizzatype3">
+      Napoliten
   </label>
 </div>
-
+<br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-  <label class="form-check-label" for="exampleRadios4">
-   <img src="../static/image/Mixed.jpg" alt="Mixed"> Mixed
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('11.99','../static/image/Mixed.jpg')" name="pizzatype" id="pizzatype4" value="mixed">
+  <label class="form-check-label" for="pizzatype4">
+      Mixed
   </label>
 </div>
 </div>
+</form>
 
 <!-- Inputs -->
 
@@ -93,6 +99,8 @@
         <input class="form-control" type="text" placeholder="Address">
     </label>
 
+<!-- Toppings -->
+
 <div class="add">
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -100,6 +108,7 @@
    Green Pepper
   </label>
 </div>
+<br>
 
     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
@@ -107,6 +116,7 @@
    Tomato
   </label>
 </div>
+<br>
 
     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
@@ -114,6 +124,7 @@
    Pickle
   </label>
 </div>
+<br>
 
     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
@@ -121,7 +132,7 @@
    Mushroom
   </label>
 </div>
-
+<br>
 
     <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
@@ -129,28 +140,32 @@
    Olive
   </label>
 </div>
+<br>
+
 </div>
 
-
-
-    <label class="price">
-        <input class="form-control" type="text" placeholder="Unit Price">
-    </label>
-
-    <div class="form-group">
-  <label for="example-number-input" class="col-2 col-form-label"></label>
-  <div class="col-15">
-    <input class="form-control" type="number" value="1" id="example-number-input">
-  </div>
+<h3 class="quantity_text">Quantity</h3>
+<div class="form-group">
+<label for="quantity" class="col-2 col-form-label"></label>
+<div class="col-15">
+    <input class="form-control" type="number" onchange="calculateTotal()" min="1" value="1" id="quantity">
+</div>
 </div>
 
-     <label class="total">
-        <input class="form-control" type="text" placeholder="Total">
-    </label>
+<h3 class="price_text">Unit Price</h3>
+<label class="price">
+<input class="form-control" type="text" readonly placeholder="Unit Price" value="10.99" id="unitprice">
+</label>
 
-     <label class="calories">
-        <input class="form-control" type="text" placeholder="Calories">
-    </label>
+<h3 class="calorie_text">Calories</h3>
+<label class="calories">
+    <input class="form-control" type="text" readonly placeholder="Calories" id="calories">
+</label>
+
+<h3 class="total_text">Total</h3>
+<label class="total">
+    <input class="form-control" type="text" readonly placeholder="Total" id="total">
+</label>
 
 <!-- Images -->
 
@@ -158,13 +173,27 @@
 
 <img src="../static/image/giphy.gif" alt="mario jumping" class="jump">
 
-<img src="../static/image/1455741808146.png" alt="luigi face" class="luigi_face">
-
-<img src="../static/image/pizza-text-png-1.png" alt="pizza text" class="the_pizza">
-
+<img src="../static/image/Sicilian.jpg" alt="cover" id="pizzaimage"  class="cover">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    
+    function calculateTotal() {
+       var price = document.getElementById("unitprice").value;
+       var quantity = document.getElementById("quantity").value;
+       var total = price * quantity;
+
+       document.getElementById("total").value = total;
+    }
+    
+    function changePizzaInfo(price, image) {
+        document.getElementById("pizzaimage").src = image;
+        document.getElementById("unitprice").value = price;
+        calculateTotal()
+    }
+</script>
 </body>
 </html>
