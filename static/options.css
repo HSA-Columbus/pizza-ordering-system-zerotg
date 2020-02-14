@@ -47,13 +47,16 @@ top: 530px;}
 .name{
     position: absolute;
     left: 65px;
-    top: 280px
+    top: 280px;
+    width: 500px;
 }
 
 .house{
     position: absolute;
     left: 65px;
-    top: 360px
+    top: 360px;
+    width: 500px;
+
 }
 
 .add{
@@ -67,19 +70,23 @@ top: 530px;}
     left: 65px;
     top: 1050px;
     width: 100px;
-    height: 100px
+    height: 100px;
 }
 
 .price{
     position: absolute;
     left: 65px;
     top: 1240px;
+    width: 500px;
+
 }
 
 .total{
     position: absolute;
     left: 65px;
     top: 1380px;
+    width: 500px;
+
 }
 
 
@@ -87,12 +94,16 @@ top: 530px;}
     position: absolute;
     left: 65px;
     top: 1310px;
+    width: 500px;
+
 }
 
 .form-group{
     position: absolute;
     left: 65px;
     top: 1145px;
+    width: 500px;
+
 }
 
 .luigi{
@@ -134,4 +145,43 @@ top: 530px;}
     position: absolute;
     left: 65px;
     top: 1350px;
+}
+
+.mario_ad{
+    position: absolute;
+    right: 0;
+    top: 527px;
+    height: 300px;
+    width: 200px;
+}
+
+.switch_ad{
+    position: absolute;
+    right: 0;
+    top: 227px;
+    height: 300px;
+    width: 200px;
+
+}
+
+.smash{
+    position: absolute;
+    right: 0;
+    top: 827px;
+    height: 300px;
+    width: 200px;
+}
+
+.mansion{
+    position: absolute;
+    right: 0;
+    top: 1127px;
+    height: 300px;
+    width: 200px;
+}
+
+#button{
+    position: absolute;
+    left: 65px;
+    top: 1500px;
 }

@@ -60,28 +60,28 @@ Luigi and Mario's Pizzeria</a></div>
 <form action="" method="get" id="additions">
 <div class="options">
 <div class="form-check">
-  <input class="form-check-input" type="radio" onclick="changePizzaInfo('10.99','../static/image/Sicilian.jpg')" name="pizzatype" id="pizzatype1" value="sicilian" checked>
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('1000','10.99','../static/image/Sicilian.jpg')" name="pizzatype" id="pizzatype1" value="sicilian" checked>
   <label class="form-check-label" for="pizzatype1">
       Sicilian
   </label>
 </div>
 <br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" onclick="changePizzaInfo('11.99','../static/image/Marine.jpg')" name="pizzatype" id="pizzatype2" value="marine">
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('2000','11.99','../static/image/Marine.jpg')" name="pizzatype" id="pizzatype2" value="marine">
   <label class="form-check-label" for="pizzatype2">
       Marine
   </label>
 </div>
 <br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" onclick="changePizzaInfo('12.99','../static/image/Napoliten.jpg')" name="pizzatype" id="pizzatype3" value="napoliten">
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('5000','12.99','../static/image/Napoliten.jpg')" name="pizzatype" id="pizzatype3" value="napoliten">
   <label class="form-check-label" for="pizzatype3">
       Napoliten
   </label>
 </div>
 <br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" onclick="changePizzaInfo('11.99','../static/image/Mixed.jpg')" name="pizzatype" id="pizzatype4" value="mixed">
+  <input class="form-check-input" type="radio" onclick="changePizzaInfo('3000','11.99','../static/image/Mixed.jpg')" name="pizzatype" id="pizzatype4" value="mixed">
   <label class="form-check-label" for="pizzatype4">
       Mixed
   </label>
@@ -103,7 +103,7 @@ Luigi and Mario's Pizzeria</a></div>
 
 <div class="add">
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
    Green Pepper
   </label>
@@ -111,7 +111,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck2">
   <label class="form-check-label" for="defaultCheck2">
    Tomato
   </label>
@@ -119,7 +119,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck3">
   <label class="form-check-label" for="defaultCheck3">
    Pickle
   </label>
@@ -127,7 +127,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck4">
   <label class="form-check-label" for="defaultCheck4">
    Mushroom
   </label>
@@ -135,7 +135,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck5">
   <label class="form-check-label" for="defaultCheck5">
    Olive
   </label>
@@ -159,13 +159,15 @@ Luigi and Mario's Pizzeria</a></div>
 
 <h3 class="calorie_text">Calories</h3>
 <label class="calories">
-    <input class="form-control" type="text" readonly placeholder="Calories" id="calories">
+    <input class="form-control" type="text" readonly placeholder="Calories" id="calorie">
 </label>
 
 <h3 class="total_text">Total</h3>
 <label class="total">
-    <input class="form-control" type="text" readonly placeholder="Total" id="total">
+    <input class="form-control" type="text" readonly placeholder="Total" id="total" value="10.99">
 </label>
+
+<a class="btn btn-primary" id = "button" href="http://127.0.0.1:5000/check" role="button">Submit</a>
 
 <!-- Images -->
 
@@ -175,12 +177,29 @@ Luigi and Mario's Pizzeria</a></div>
 
 <img src="../static/image/Sicilian.jpg" alt="cover" id="pizzaimage"  class="cover">
 
+<img src="../static/image/marioadd.jpg" alt="marioad" class="mario_ad">
+
+<img src="../static/image/switch.png" alt="switch ad" class="switch_ad">
+
+<img src="../static/image/mansion.jpg" alt="luigi's mansion ad" class="mansion">
+
+<img src="../static/image/sword.jpg" alt="smash add" class="smash">
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
-    
+
+    function addFlavour(checkbox ,flavourPrice) {
+        var price = document.getElementById("unitprice").value;
+
+        price = checkbox.checked ? parseFloat(price) + parseFloat(flavourPrice) : parseFloat(price) - parseFloat(flavourPrice);
+
+        document.getElementById("unitprice").value = price;
+        calculateTotal();
+    }
+
     function calculateTotal() {
        var price = document.getElementById("unitprice").value;
        var quantity = document.getElementById("quantity").value;
@@ -189,10 +208,11 @@ Luigi and Mario's Pizzeria</a></div>
        document.getElementById("total").value = total;
     }
     
-    function changePizzaInfo(price, image) {
+    function changePizzaInfo(calorie ,price , image) {
         document.getElementById("pizzaimage").src = image;
         document.getElementById("unitprice").value = price;
         calculateTotal()
+        document.getElementById("calorie").value = calorie;
     }
 </script>
 </body>
