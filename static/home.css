@@ -18,6 +18,10 @@ body{
     color: #FFFFFF;
 }
 
-.both{
+.rounded{
 position: center;
+}
+
+.btn-outline-light{
+    position: center;
 }

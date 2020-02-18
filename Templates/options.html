@@ -33,14 +33,13 @@ Luigi and Mario's Pizzeria</a></div>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="http://127.0.0.1:5000/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           More
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Pizza</a>
           <a class="dropdown-item" href="#">Wings</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Mushrooms</a>
@@ -91,19 +90,21 @@ Luigi and Mario's Pizzeria</a></div>
 
 <!-- Inputs -->
 
+<form action="/check" method="post">
     <label class="name">
-        <input class="form-control" type="text" placeholder="Name and Surname">
+        <input class="form-control" name="name" type="text" placeholder="Name and Surname">
     </label>
 
     <label class="house">
-        <input class="form-control" type="text" placeholder="Address">
+        <input class="form-control" name="address" type="text" placeholder="Address">
     </label>
+</form>
 
 <!-- Toppings -->
 
 <div class="add">
 <div class="form-check">
-  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck1">
+  <input class="form-check-input" name="pepper" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
    Green Pepper
   </label>
@@ -111,7 +112,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck2">
+  <input class="form-check-input" name="tomato" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck2">
   <label class="form-check-label" for="defaultCheck2">
    Tomato
   </label>
@@ -119,7 +120,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck3">
+  <input class="form-check-input" name="pickle" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck3">
   <label class="form-check-label" for="defaultCheck3">
    Pickle
   </label>
@@ -127,7 +128,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck4">
+  <input class="form-check-input" name="mushroom" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck4">
   <label class="form-check-label" for="defaultCheck4">
    Mushroom
   </label>
@@ -135,7 +136,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck5">
+  <input class="form-check-input" name="olive" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck5">
   <label class="form-check-label" for="defaultCheck5">
    Olive
   </label>
@@ -148,23 +149,23 @@ Luigi and Mario's Pizzeria</a></div>
 <div class="form-group">
 <label for="quantity" class="col-2 col-form-label"></label>
 <div class="col-15">
-    <input class="form-control" type="number" onchange="calculateTotal()" min="1" value="1" id="quantity">
+    <input class="form-control" name="quantity" type="number" onchange="calculateTotal()" min="1" value="1" id="quantity">
 </div>
 </div>
 
 <h3 class="price_text">Unit Price</h3>
 <label class="price">
-<input class="form-control" type="text" readonly placeholder="Unit Price" value="10.99" id="unitprice">
+<input class="form-control" name="price" type="text" readonly placeholder="Unit Price" value="10.99" id="unitprice">
 </label>
 
 <h3 class="calorie_text">Calories</h3>
 <label class="calories">
-    <input class="form-control" type="text" readonly placeholder="Calories" id="calorie">
+    <input class="form-control" name="calories" type="text" readonly placeholder="Calories" id="calorie">
 </label>
 
 <h3 class="total_text">Total</h3>
 <label class="total">
-    <input class="form-control" type="text" readonly placeholder="Total" id="total" value="10.99">
+    <input class="form-control" name="total" type="text" readonly placeholder="Total" id="total" value="10.99">
 </label>
 
 <a class="btn btn-primary" id = "button" href="http://127.0.0.1:5000/check" role="button">Submit</a>
