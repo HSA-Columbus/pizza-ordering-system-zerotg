@@ -56,7 +56,7 @@ Luigi and Mario's Pizzeria</a></div>
 
 <!-- Pizzas -->
 
-<form action="" method="get" id="additions">
+<form action="/home" method="POST" id="additions">
 <div class="options">
 <div class="form-check">
   <input class="form-check-input" type="radio" onclick="changePizzaInfo('1000','10.99','../static/image/Sicilian.jpg')" name="pizzatype" id="pizzatype1" value="sicilian" checked>
@@ -86,11 +86,10 @@ Luigi and Mario's Pizzeria</a></div>
   </label>
 </div>
 </div>
-</form>
+
 
 <!-- Inputs -->
 
-<form action="/check" method="post">
     <label class="name">
         <input class="form-control" name="name" type="text" placeholder="Name and Surname">
     </label>
@@ -98,13 +97,13 @@ Luigi and Mario's Pizzeria</a></div>
     <label class="house">
         <input class="form-control" name="address" type="text" placeholder="Address">
     </label>
-</form>
+
 
 <!-- Toppings -->
 
 <div class="add">
 <div class="form-check">
-  <input class="form-check-input" name="pepper" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck1">
+  <input class="form-check-input" name="pepper" onchange="addFlavour(this, '1')" type="checkbox" value="pepper" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
    Green Pepper
   </label>
@@ -112,7 +111,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" name="tomato" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck2">
+  <input class="form-check-input" name="tomato" onchange="addFlavour(this, '1')" type="checkbox" value="tomato" id="defaultCheck2">
   <label class="form-check-label" for="defaultCheck2">
    Tomato
   </label>
@@ -120,7 +119,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" name="pickle" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck3">
+  <input class="form-check-input" name="pickle" onchange="addFlavour(this, '1')" type="checkbox" value="pickle" id="defaultCheck3">
   <label class="form-check-label" for="defaultCheck3">
    Pickle
   </label>
@@ -128,7 +127,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" name="mushroom" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck4">
+  <input class="form-check-input" name="mushroom" onchange="addFlavour(this, '1')" type="checkbox" value="mushroom" id="defaultCheck4">
   <label class="form-check-label" for="defaultCheck4">
    Mushroom
   </label>
@@ -136,7 +135,7 @@ Luigi and Mario's Pizzeria</a></div>
 <br>
 
     <div class="form-check">
-  <input class="form-check-input" name="olive" onchange="addFlavour(this, '1')" type="checkbox" value="" id="defaultCheck5">
+  <input class="form-check-input" name="olive" onchange="addFlavour(this, '1')" type="checkbox" value="olive" id="defaultCheck5">
   <label class="form-check-label" for="defaultCheck5">
    Olive
   </label>
@@ -168,8 +167,8 @@ Luigi and Mario's Pizzeria</a></div>
     <input class="form-control" name="total" type="text" readonly placeholder="Total" id="total" value="10.99">
 </label>
 
-<a class="btn btn-primary" id = "button" href="http://127.0.0.1:5000/check" role="button">Submit</a>
-
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 <!-- Images -->
 
 <img src="../static/image/Luigi0.png" alt="mr.L" class="luigi">

@@ -44,3 +44,8 @@ top: 23px;
 .options{position: absolute;
 left: 65px;
 top: 530px;}
+
+.table-dark{
+    position: absolute;
+    top: 300px;
+}
