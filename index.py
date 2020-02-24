@@ -2,10 +2,10 @@ import sqlite3
 
 from flask import *
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/home', methods=('GET', 'POST'))
+@application.route('/home', methods=('GET', 'POST'))
 def home():
     if request.method == "POST":
         with sqlite3.connect("data") as conn:
@@ -34,7 +34,7 @@ def home():
     return render_template("options.html")
 
 
-@app.route('/check')
+@application.route('/check')
 def check():
     with sqlite3.connect("data") as conn:
         command = "SELECT * FROM orders"
@@ -43,10 +43,10 @@ def check():
         return render_template("check.html", list=list)
 
 
-@app.route('/')
+@application.route('/')
 def main():
     return render_template("home.html")
 
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
