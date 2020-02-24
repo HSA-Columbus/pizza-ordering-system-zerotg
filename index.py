@@ -38,7 +38,7 @@ def home():
 def check():
     with sqlite3.connect("data") as conn:
         command = "SELECT * FROM orders"
-        table = conn.exucute(command)
+        table = conn.execute(command)
         list = table.fetchall()
         return render_template("check.html", list=list)
 
